@@ -1,0 +1,28 @@
+.main{
+    width:90%;  
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.mn{
+    float: right;
+    margin-right: 10%;
+}
+.pp{
+    color: #ef940f;
+    font-size: 1.5rem !important;
+    text-transform: uppercase;
+    font-weight: bold !important;
+    padding: 20px;
+}
+.gp{
+    color:black;
+    font-size: 1.3rem;
+    font-weight: 600;
+}
+.sp{
+    
+    color:green;
+   
+    
+}

@@ -1,0 +1,54 @@
+
+<div class="main"><span class="pp">ORDERS</span></div>
+
+
+<div class="container" style="align-items: center">
+    <div class="row align-items-start rw">
+        <div class="col-sm">
+            #
+        </div>
+        <div class="col-sm">
+            Customer Name
+        </div>
+        <div class="col-sm">
+            No.of items Ordered
+        </div>
+        <div class="col-sm">
+            Total
+        </div>
+        <div class="col-sm">
+            Status
+        </div>
+        <div class="col-sm">
+            
+        </div>
+    </div>
+    <div class="row align-items-center hv" *ngFor="let item of cdata;let i=index" style="padding-bottom:10px" >
+      
+        <div class="col-sm" (click)="goto_orders(item.c_id)">
+                    {{item.c_id}}
+            </div>
+            <div class="col-sm" (click)="goto_orders(item.c_id)">
+                {{item.c_name}}
+            </div>
+            <div class="col-sm" (click)="goto_orders(item.c_id)">
+                <div *ngFor="let x of item.c_items;let i=index">
+                        {{i+1}}.{{x.item}}
+                </div>
+               <!-- {{item.c_items.length}} -->
+                
+            </div>
+            <div class="col-sm" (click)="goto_orders(item.c_id)">
+                    {{item.total}}
+            </div>
+            <div class="col-sm" style="color:green" (click)="goto_orders(item.c_id)">
+                    {{item.status}}
+            </div>
+    
+            <div class="col-sm">
+            <button type="button" class="btn  btn-sm" style="background-color: #ef940f; color:white" (click)="changestatus(item.c_id)" [disabled]="item.status == 'Ready to Serve'">Change Status</button>
+            </div>
+    </div>
+</div>
+
+      

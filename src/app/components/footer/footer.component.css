@@ -1,0 +1,12 @@
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    color: white;
+    text-align: center;
+    align-content: center;
+  }
+  .pz{
+    font-size:0.8rem;
+  }

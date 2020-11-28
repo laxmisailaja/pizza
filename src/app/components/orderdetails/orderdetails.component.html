@@ -1,0 +1,20 @@
+<div class="main">
+    <span class="pp">ORDER DETAILS</span>
+
+</div>
+<div class="mn">
+        <button type="button" class="btn  btn-sm" style="background-color: #ef940f; color:white;font-size:1.2rem" (click)="back()">Back</button>
+    </div>
+
+<div class="container" style="align-items: center">
+        <ul class="list-group list-group-flush gp">
+                <li class="list-group-item">Customer ID : <label class="sp">{{orderdata.c_id}}</label></li>
+                <li class="list-group-item">CUSTOMER NAME : <span class="sp">{{orderdata.c_name}}</span></li>
+                <li class="list-group-item">CUSTOMER ADDRESS : <span class="sp">{{orderdata.c_address}}</span></li>
+                <li class="list-group-item">ITEM NAMES : <span *ngFor="let item of orderdata.c_items;let i= index" class="sp">{{item.item}}{{i === orderdata.c_items.length -1 ? '' : ',&nbsp;' }}</span></li>
+                <li class="list-group-item">PRICE : <span *ngFor="let item of orderdata.c_items;let i= index" class="sp">{{item.price}}{{i === orderdata.c_items.length -1 ? '' : ',&nbsp;'}}</span></li>
+                <li class="list-group-item">TOTAL : <span class="sp">{{orderdata.total}}</span></li>
+                <li class="list-group-item">STATUS : <span class="sp">{{orderdata.status}}</span></li>
+              </ul>   
+ </div>
+ 
